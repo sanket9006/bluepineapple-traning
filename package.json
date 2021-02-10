@@ -1,0 +1,28 @@
+{
+  "name": "bluepineapple.io-traning",
+  "version": "1.0.0",
+  "description": "Bluepineapple.io 2021 Batch Traning",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanket9006/bluepineapple.io-traning.git"
+  },
+  "keywords": [
+    "bluepineapple.io",
+    "bluepineapple",
+    "backend"
+  ],
+  "author": "Sanket Patil (sanket.9006@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanket9006/bluepineapple.io-traning/issues"
+  },
+  "homepage": "https://github.com/sanket9006/bluepineapple.io-traning#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

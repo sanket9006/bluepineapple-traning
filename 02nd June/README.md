@@ -1,6 +1,6 @@
 Run Program directly by clicking them [ HTML + Javascript ]
 
-1. [Given character is Alphabet or not](https://sanket9006.github.io/bluepineapple-traning/02nd%20June/alphabet_or_not.html)
+<a href="https://sanket9006.github.io/bluepineapple-traning/02nd%20June/alphabet_or_not.html" target="_blank">1. Given character is Alphabet or not</a>
 
 Applications of
 

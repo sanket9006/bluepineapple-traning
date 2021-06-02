@@ -9,13 +9,26 @@
     <p id="demo"></p>
 
     <script>
-      var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
-      var text = "";
-      var i;
-      for (i = 0; i < cars.length; i++) {
-        text += cars[i] + "<br>";
+      var final_text = "";
+      var numberoftimes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+      var n = parseInt(
+        prompt("Enter Number to find number of occurances of each digit")
+      );
+      var count = 0;
+      var d = 5;
+
+      while (n > 0) {
+        let value = n % 10;
+        numberoftimes[value] = numberoftimes[value] + 1;
+        n = parseInt(n / 10);
       }
-      document.getElementById("demo").innerHTML = text;
+
+      numberoftimes.map((item, index) => {
+        currenttext = document.getElementById("demo").innerText;
+        document.getElementById("demo").innerText =
+          currenttext + index + " occured " + item + " times " + "\n";
+      });
     </script>
   </body>
 </html>

@@ -6,31 +6,33 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 id="Output">Program Output is</h1>
-    <h2 id="value"></h2>
+    <div class="container">
+      <h1 id="Output">Program Output is</h1>
+      <h2 id="value"></h2>
 
-    <!-- JS-Code -->
-    <script>
-      const input = prompt(
-        " Enter Character to check weather its Alphabet or Not"
-      );
-      const into_ascii = input.charCodeAt();
-      var result = false;
+      <!-- JS-Code -->
+      <script>
+        const input = prompt(
+          " Enter Character to check weather its Alphabet or Not"
+        );
+        const into_ascii = input.charCodeAt();
+        var result = false;
 
-      if (into_ascii > 64 && into_ascii < 91) {
-        result = "true";
-      }
+        if (into_ascii > 64 && into_ascii < 91) {
+          result = "true";
+        }
 
-      if (into_ascii > 96 && into_ascii < 123) {
-        result = "true";
-      }
+        if (into_ascii > 96 && into_ascii < 123) {
+          result = "true";
+        }
 
-      if (result) {
-        document.getElementById("value").innerText = input + " is character  ";
-      } else {
-        document.getElementById("value").innerText =
-          input + " is not character  ";
-      }
-    </script>
+        if (result) {
+          document.getElementById("value").innerText = input + " is Alphabet  ";
+        } else {
+          document.getElementById("value").innerText =
+            input + " is not Alphabet  ";
+        }
+      </script>
+    </div>
   </body>
 </html>

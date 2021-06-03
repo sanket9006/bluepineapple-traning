@@ -6,6 +6,7 @@
     <title>Document</title>
   </head>
   <body>
+    <h1 id="demo"></h1>
     <script>
       const number = prompt("Enter number betwenn 0 to 999");
 
@@ -55,19 +56,18 @@
           let last = number % 10;
 
           number < 20
-            ? console.log(onetonineteen[number])
+            ? (document.getElementById("demo").innerText =
+                onetonineteen[number])
             : number < 100
-            ? console.log(
-                tens[parseInt(number / 10)] + " " + onetonineteen[number % 10]
-              )
+            ? (document.getElementById("demo").innerText =
+                tens[parseInt(number / 10)] + " " + onetonineteen[number % 10])
             : number < 1000
-            ? console.log(
+            ? (document.getElementById("demo").innerText =
                 onetonineteen[parseInt(first)] +
-                  " hundred " +
-                  tens[parseInt(second)] +
-                  " " +
-                  onetonineteen[last]
-              )
+                " hundred " +
+                tens[parseInt(second)] +
+                " " +
+                onetonineteen[last])
             : number < 10000
             ? {}
             : {};

@@ -8,7 +8,7 @@
   <body>
     <h1 id="demo"></h1>
     <script>
-      const number = prompt("Enter number betwenn 0 to 999");
+      var number = parseInt(prompt("Enter number betwenn 0 to 999"));
 
       const onetonineteen = [
         "",
@@ -46,33 +46,111 @@
         "Ninety",
       ];
 
-      if (number > 999 || number < 0) {
-        alert("You entered wrong number");
-      } else {
-        {
-          let first = number / 100;
-          let forsecond = number / 10;
-          let second = forsecond % 10;
-          let last = number % 10;
+      function two(num) {
+        num = parseInt(num);
+        console.log("called");
 
-          number < 20
-            ? (document.getElementById("demo").innerText =
-                onetonineteen[number])
-            : number < 100
-            ? (document.getElementById("demo").innerText =
-                tens[parseInt(number / 10)] + " " + onetonineteen[number % 10])
-            : number < 1000
-            ? (document.getElementById("demo").innerText =
-                onetonineteen[parseInt(first)] +
-                " hundred " +
-                tens[parseInt(second)] +
-                " " +
-                onetonineteen[last])
-            : number < 10000
-            ? {}
-            : {};
+        if (num < 20) {
+          return `${onetonineteen[num]}`;
+        } else {
+          let tensplace = num / 10;
+          let unitplace = num % 10;
+          return `${tens[parseInt(tensplace)]}  ${onetonineteen[unitplace]}`;
         }
       }
+
+      function three(num) {
+        if (num > 99) {
+          return `${two(parseInt(num / 100))} hundred  ${two(num % 100)}`;
+        } else {
+          return two(parseInt(num));
+        }
+      }
+
+      function four(num) {
+        num = num.toString();
+        let forthree = parseInt(num.slice(1, 4));
+        let fortwo = parseInt(num.slice(0, 1));
+
+        // console.log("passed", "three", forthree, "two", fortwo);
+
+        return `${two(fortwo)} thousand ${three(forthree)}`;
+      }
+
+      function five(num) {
+        return `${two(parseInt(num / 1000))} thousand  ${three(num % 1000)}`;
+      }
+
+      function six(num) {
+        return `${two(parseInt(num / 100000))} lakh  ${five(num % 100000)}`;
+      }
+
+      function sevan(num) {
+        return `${two(parseInt(num / 100000))} lakh  ${five(num % 100000)}`;
+      }
+
+      if (number < 100000000) {
+        switch (number.toString().length) {
+          case 1:
+            document.getElementById("demo").innerText = two(number);
+            break;
+
+          case 2:
+            document.getElementById("demo").innerText = two(number);
+            break;
+
+          case 3:
+            document.getElementById("demo").innerText = three(number);
+            break;
+
+          case 4:
+            document.getElementById("demo").innerText = four(number);
+            break;
+
+          case 5:
+            document.getElementById("demo").innerText = five(number);
+            break;
+
+          case 6:
+            document.getElementById("demo").innerText = six(number);
+            break;
+
+          case 7:
+            document.getElementById("demo").innerText = sevan(number);
+            break;
+
+          case 8:
+            break;
+        }
+      }
+
+      // if (number > 999 || number < 0) {
+      //   alert("You entered wrong number");
+      // } else {
+      //   {
+      //     let first = number / 100;
+      //     let forsecond = number / 10;
+      //     let second = forsecond % 10;
+      //     let last = number % 10;
+
+      //     number < 20
+      //       ? (document.getElementById("demo").innerText =
+      //           onetonineteen[number])
+      //       : number < 100
+      //       ? (document.getElementById("demo").innerText =
+      //           tens[parseInt(number / 10)] + " " + onetonineteen[number % 10])
+      //       : number < 1000
+      //       ? (document.getElementById("demo").innerText =
+      //           onetonineteen[parseInt(first)] +
+      //           " hundred " +
+      //           tens[parseInt(second)] +
+      //           " " +
+      //           onetonineteen[last])
+      //       : number < 10000
+      //       ? {}
+      //       : {};
+      //   }
+      // }
     </script>
   </body>
 </html>

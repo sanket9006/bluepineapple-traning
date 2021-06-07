@@ -8,7 +8,7 @@
   <body>
     <h1 id="demo"></h1>
     <script>
-      var number = parseInt(prompt("Enter number betwenn 0 to 999"));
+      var number = parseInt(prompt("Enter number betwenn 0 to 99 Crore"));
 
       const onetonineteen = [
         "",
@@ -117,6 +117,13 @@
         )}`;
       }
 
+      function ten(num) {
+        num = num.toString();
+        return `${two(parseInt(num.slice(0, 2)))} Crore  ${sevan(
+          num.slice(2, 9)
+        )}`;
+      }
+
       if (number < 1000000000) {
         switch (number.toString().length) {
           case 1:
@@ -153,6 +160,10 @@
 
           case 9:
             document.getElementById("demo").innerText = nine(number);
+            break;
+
+          case 10:
+            document.getElementById("demo").innerText = ten(number);
             break;
         }
       } else {

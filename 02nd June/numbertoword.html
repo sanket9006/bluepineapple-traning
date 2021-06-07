@@ -60,7 +60,7 @@
       }
 
       function three(num) {
-        if (num > 99) {
+        if ((num > 99) & (num < 1000)) {
           return `${two(parseInt(num / 100))} hundred  ${two(num % 100)}`;
         } else {
           return two(parseInt(num));
@@ -68,28 +68,56 @@
       }
 
       function four(num) {
-        num = num.toString();
-        let forthree = parseInt(num.slice(1, 4));
-        let fortwo = parseInt(num.slice(0, 1));
-
-        // console.log("passed", "three", forthree, "two", fortwo);
-
-        return `${two(fortwo)} thousand ${three(forthree)}`;
+        if ((num > 999) & (num < 10000)) {
+          num = num.toString();
+          let forthree = parseInt(num.slice(1, 4));
+          let fortwo = parseInt(num.slice(0, 1));
+          // console.log("passed", "three", forthree, "two", fortwo);
+          return `${two(fortwo)} thousand ${three(forthree)}`;
+        } else {
+          return three(num);
+        }
       }
 
       function five(num) {
-        return `${two(parseInt(num / 1000))} thousand  ${three(num % 1000)}`;
+        if ((num > 9999) & (num < 100000)) {
+          return `${two(parseInt(num / 1000))} thousand  ${three(num % 1000)}`;
+        } else {
+          return four(num);
+        }
       }
 
       function six(num) {
-        return `${two(parseInt(num / 100000))} lakh  ${five(num % 100000)}`;
+        if ((num > 99999) & (num < 1000000)) {
+          return `${two(parseInt(num / 100000))} lakh  ${five(num % 100000)}`;
+        } else {
+          return `${five(parseInt(num))}`;
+        }
       }
 
       function sevan(num) {
-        return `${two(parseInt(num / 100000))} lakh  ${five(num % 100000)}`;
+        if ((num > 999999) & (num < 10000000)) {
+          return `${two(parseInt(num / 100000))} lakh  ${five(num % 100000)}`;
+        } else {
+          return `${six(parseInt(num))}`;
+        }
       }
 
-      if (number < 100000000) {
+      function eight(num) {
+        num = num.toString();
+        return `${two(parseInt(num.slice(0, 1)))} Crore  ${sevan(
+          num.slice(1, 8)
+        )}`;
+      }
+
+      function nine(num) {
+        num = num.toString();
+        return `${two(parseInt(num.slice(0, 2)))} Crore  ${sevan(
+          num.slice(2, 9)
+        )}`;
+      }
+
+      if (number < 1000000000) {
         switch (number.toString().length) {
           case 1:
             document.getElementById("demo").innerText = two(number);
@@ -120,8 +148,15 @@
             break;
 
           case 8:
+            document.getElementById("demo").innerText = eight(number);
+            break;
+
+          case 9:
+            document.getElementById("demo").innerText = nine(number);
             break;
         }
+      } else {
+        document.getElementById("demo").innerText = "Enter valid Number";
       }
 
       // if (number > 999 || number < 0) {

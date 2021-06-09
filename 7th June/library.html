@@ -116,14 +116,20 @@
       }
 
       function show() {
-        document.getElementById("result").innerText =
-          "---------------------------    Book Records    ---------------------------------<br><br>";
         let result = [];
+        result.push(
+          "---------------------------    Book Records    ---------------------------------<br><br>"
+        );
         for (let i = 0; i < id.length; i++) {
           result.push(
             `Book ID :-  ${id[i]} <br>  Book Name :- ${bookname[i]} <br> Book Author :- ${author[i]} <br> Book Cost :- &#8377;${cost[i]} <br><br><br>`
           );
         }
+
+        result.push(
+          "---------------------------    Book Records    ---------------------------------<br><br>"
+        );
+
         document.getElementById("result").innerHTML = result.join("");
       }
 

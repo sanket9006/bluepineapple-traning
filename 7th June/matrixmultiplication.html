@@ -7,11 +7,47 @@
   </head>
   <body>
     <script>
-      var size = prompt(
-        "enter size of matrix for multiplication in m n format"
+      var matrix1 = [];
+      var matrix2 = [];
+      var finalanswer = [];
+
+      var size1 = prompt(
+        "enter size of matrix 1 for multiplication in 'm n' format"
       );
 
-      console.log(size.slice(""));
+      var size2 = prompt(
+        "enter size of matrix 2 for multiplication in 'm n' format"
+      );
+
+      size1_arr = size1.split(" ");
+      size2_arr = size2.split(" ");
+
+      if (size1_arr[1] != size2_arr[1]) {
+        alert(
+          "Note :- \nnumber of columns in the first matrix should be equal to the number of rows in the second matrix "
+        );
+      } else {
+        // Taking input for Matrix 1
+        for (let i = 0; i < size1_arr[1]; i++) {
+          let elementsofarray = prompt(
+            "enter elements of arrat in 'w x y z' format"
+          );
+          let arrayofelement = elementsofarray.split(" ");
+          matrix1[i] = arrayofelement;
+        }
+
+        // Taking input for Matrix 1
+        for (let i = 0; i < size2_arr[1]; i++) {
+          let elementsofarray = prompt(
+            "enter elements of arrat in 'w x y z' format"
+          );
+          let arrayofelement = elementsofarray.split(" ");
+          matrix2[i] = arrayofelement;
+        }
+
+        console.log(matrix1);
+        console.log(matrix2);
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      var input = prompt("Enter string");
+      var frequency = new Map();
+
+      let listofinput = input.split("");
+      //   console.log(frequency.keys());
+
+      listofinput.findIndex((value, index) => {
+        if (frequency.has(value)) {
+          let current_value = frequency.get(value);
+          frequency.set(value, current_value + 1);
+        } else {
+          frequency.set(value, 1);
+        }
+      });
+
+      let entries = [];
+
+      frequency.forEach((value, index) => {
+        entries.push(" <li> " + index + " ,  " + " " + value + " <br>");
+      });
+
+      document.getElementById("result").innerHTML = entries.join("");
+      console.log([...frequency.entries()]);
+    </script>
+  </body>
+</html>

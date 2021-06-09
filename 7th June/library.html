@@ -1,0 +1,126 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link href="../styles.css" rel="stylesheet" type="text/css" /> -->
+    <div class="demoo">
+      <p id="demo"></p>
+      <p id="index"></p>
+      <button onclick="indexof_id()">Try it</button>
+    </div>
+
+    <script>
+      var author = ["Sanket Patil", "Aniket ", "Ashish Raut"];
+      var bookname = ["ABC", "ASF", "XYZ"];
+      var id = [8007, 8009, 8008];
+      var cost = [88, 99, 77];
+      var insertat;
+
+      function checkindex(value_) {
+        let index = value_ == insertat;
+        return index;
+      }
+
+      function indexof_id() {
+        insertat = parseInt(prompt("Enter book ID to insert"));
+        let result = id.findIndex(checkindex);
+        if (result == -1) {
+          alert("Enter correct value");
+          indexof_id();
+        } else {
+          return result;
+        }
+      }
+
+      function showresult() {
+        document.write(
+          "---------------------------    Book Records    ---------------------------------<br><br>"
+        );
+        for (let i = 0; i < id.length; i++) {
+          document.write(
+            `Book ID :-  ${id[i]} <br>  Book Name :- ${bookname[i]} <br> Book Author :- ${author[i]} <br> Book Cost :-  ${cost[i]} <br>`
+          );
+          document.write("<br>");
+        }
+        document.write(
+          "---------------------------    Book Records    ---------------------------------<br>"
+        );
+      }
+
+      do {
+        var input = parseInt(
+          prompt(" 1. Create\n 2. Insert\n 3. Search\n 4. Delete  \n 0. Exit ")
+        );
+        switch (input) {
+          case 1:
+            let id_ = parseInt(prompt("Enter book ID (Only Numbers)"));
+            id.push(id_);
+
+            let name = prompt("Enter Book Name");
+            bookname.push(name);
+
+            let author_ = prompt("Enter Author Name");
+            author.push(author_);
+
+            let cost_ = parseInt(
+              prompt("Enter Book Cost \n Note :- [Enter Numbers Only]")
+            );
+            cost.push(cost_);
+
+            // document.getElementById(
+            //   "demo"
+            // ).innerText = `Book ID : - ${id} \n Book Name :- ${name} \n Book Author :- ${author} \n Book Cost :- ${cost}  \n  \nBook Added successfully into Database`;
+            break;
+
+          case 2:
+            let index = indexof_id();
+
+            let id__ = parseInt(
+              prompt("Enter book New ID to assign(Only Numbers)")
+            );
+            id.splice(index, 0, id__);
+
+            let name_ = prompt("Enter Book Name");
+            bookname.splice(index, 0, name_);
+
+            let author__ = prompt("Enter Author Name");
+            author.splice(index, 0, author__);
+
+            let cost__ = parseInt(
+              prompt("Enter Book Cost \n Note :- [Enter Numbers Only]")
+            );
+            cost.splice(index, 0, cost__);
+            break;
+
+          case 3:
+            insertat = parseInt(
+              prompt("Enter book ID that you want to search")
+            );
+            let result = id.findIndex(checkindex);
+            document.getElementById(
+              "demo"
+            ).innerText = `Book ID :-  ${id[result]} <br>  Book Name :- ${bookname[result]} <br> Book Author :- ${author[result]} <br> Book Cost :-  ${cost[result]} <br>`;
+            break;
+          case 4:
+            document.getElementById("demo").innerText = "sdaaaaaa";
+            break;
+          case 0:
+            break;
+
+          default:
+            alert("Please Enter Number between 1 to 4 ");
+        }
+      } while (input != 0);
+      showresult();
+    </script>
+  </body>
+</html>

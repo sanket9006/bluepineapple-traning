@@ -1,0 +1,114 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="buttons">
+        <button onclick="create()">Create</button>
+        <button onclick="insert()">Insert</button>
+        <button onclick="search()">Search</button>
+        <button onclick="remove()">Delete</button>
+        <button onclick="show()">Show Records</button>
+      </div>
+      <p id="demo"></p>
+      <p id="result"></p>
+    </div>
+
+    <script>
+      var author = [
+        "Sanket Patil",
+        "Aniket ",
+        "Ashish Raut",
+        "Ashutosh",
+        "Shaktimaan",
+      ];
+      var bookname = ["ABC", "ASF", "XYZ", "RFT", "PLS"];
+      var id = [8007, 8008, 8009, 8010, 8011];
+      var cost = [88, 99, 77, 66, 158];
+      var valueofindex;
+
+      function create() {
+        let id_ = parseInt(prompt("Enter book ID (Only Numbers)"));
+        id.push(id_);
+
+        let name_ = prompt("Enter Book Name");
+        bookname.push(name_);
+
+        let author_ = prompt("Enter Author Name");
+        author.push(author_);
+
+        let cost_ = parseInt(
+          prompt("Enter Book Cost \n Note :- [Enter Numbers Only]")
+        );
+        cost.push(cost_);
+
+        document.getElementById("result").innerHTML =
+          "Book Added successfully into Database";
+      }
+
+      function insert() {
+        valueofindex = parseInt(
+          prompt("Enter book id where you want to insert")
+        );
+        let result = id.findIndex(findindexof);
+        if (result == -1) {
+          alert("Enter Correct book ID");
+        } else {
+          let id__ = parseInt(prompt("Enter New book ID (Only Numbers)"));
+          id[result] = id__;
+
+          let name__ = prompt("Enter Book Name");
+          bookname[result] = name__;
+
+          let author__ = prompt("Enter Author Name");
+          author[result] = author__;
+
+          let cost__ = parseInt(
+            prompt("Enter Book Cost \n Note :- [Enter Numbers Only]")
+          );
+          cost[result] = cost__;
+          document.getElementById("result").innerHTML =
+            "Book Inserted successfully ";
+        }
+      }
+
+      function search() {
+        valueofindex = parseInt(
+          prompt("Enter book ID that you want to search")
+        );
+        let result = id.findIndex(findindexof);
+        if (result == -1) {
+          alert("Enter correct value");
+          indexof_id();
+        } else {
+          document.getElementById(
+            "result"
+          ).innerHTML = `Book ID :-  ${id[result]} <br>  Book Name :- ${bookname[result]} <br> Book Author :- ${author[result]} <br> Book Cost :-  ${cost[result]} <br><br><br>`;
+        }
+      }
+
+      function remove() {}
+
+      function show() {
+        document.getElementById("result").innerText =
+          "---------------------------    Book Records    ---------------------------------<br><br>";
+        let result = [];
+        for (let i = 0; i < id.length; i++) {
+          result.push(
+            `Book ID :-  ${id[i]} <br>  Book Name :- ${bookname[i]} <br> Book Author :- ${author[i]} <br> Book Cost :-  ${cost[i]} <br><br><br>`
+          );
+        }
+        document.getElementById("result").innerHTML = result.join("");
+      }
+
+      function findindexof(value) {
+        let index = value == valueofindex;
+        return index;
+      }
+    </script>
+  </body>
+</html>

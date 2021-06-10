@@ -6,6 +6,7 @@
     <title>Document</title>
   </head>
   <body>
+    <p id="demo"></p>
     <script>
       var matrix1 = [];
       var matrix2 = [];
@@ -27,6 +28,15 @@
           "Note :- \nnumber of columns in the first matrix should be equal to the number of rows in the second matrix "
         );
       } else {
+        // Creating empty matrix
+        for (var i = 0; i < size1_arr[0]; i++) {
+          finalanswer[i] = [];
+          for (var j = 0; j < size2_arr[1]; j++) {
+            finalanswer[i][j] = 0;
+          }
+        }
+        console.log(finalanswer);
+
         // Taking input for Matrix 1
         for (let i = 0; i < size1_arr[1]; i++) {
           let elementsofarray = prompt(
@@ -36,7 +46,7 @@
           matrix1[i] = arrayofelement;
         }
 
-        // Taking input for Matrix 1
+        // Taking input for Matrix 2
         for (let i = 0; i < size2_arr[1]; i++) {
           let elementsofarray = prompt(
             "enter elements of arrat in 'w x y z' format"
@@ -45,8 +55,23 @@
           matrix2[i] = arrayofelement;
         }
 
-        console.log(matrix1);
-        console.log(matrix2);
+        var sum = 0;
+
+        for (let i = 0; i < size1_arr[1]; i++) {
+          for (let j = 0; j < size2_arr[0]; j++) {
+            let sum = 0;
+
+            for (let k = 0; k < size2_arr[1]; k++) {
+              sum = sum + matrix1[i][k] * matrix2[k][j];
+            }
+            console.log([i, j]);
+            finalanswer[i][j] = sum;
+
+            sum = 0;
+          }
+        }
+
+        document.getElementById("demo").innerHTML = finalanswer;
       }
     </script>
   </body>

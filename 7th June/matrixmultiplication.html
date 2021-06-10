@@ -71,7 +71,12 @@
           }
         }
 
-        document.getElementById("demo").innerHTML = finalanswer;
+        function toprintfinal(item, index) {
+          document.getElementById("demo").innerHTML +=
+            "[ " + item + " ]" + "<br>";
+        }
+
+        finalanswer.forEach(toprintfinal);
       }
     </script>
   </body>

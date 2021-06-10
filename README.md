@@ -9,3 +9,4 @@
 | 7th June | <a href="https://sanket9006.github.io/bluepineapple-traning/7th%20June/letterfrequency.html" target="_blank">1. Letter frequency counter using Map</a>                  |
 |          | <a href="https://sanket9006.github.io/bluepineapple-traning/7th%20June/palindrome.html" target="_blank">2. Palindrome</a>                                               |
 |          | <a href="https://sanket9006.github.io/bluepineapple-traning/7th%20June/library.html" target="_blank">3. Library Management</a>                                          |
+|          | <a href="https://sanket9006.github.io/bluepineapple-traning/7th%20June/matrixmultiplication.html" target="_blank">4. Matrix Multiplication</a>                          |

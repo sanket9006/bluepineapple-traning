@@ -29,6 +29,10 @@
         );
       } else {
         // Creating empty matrix
+        // Using let keyword insteed of var shows abstraction here
+        // because using let will limit its scope only for its block
+        // variable declared with let wont be accessiable outside of the block
+
         for (var i = 0; i < size1_arr[0]; i++) {
           finalanswer[i] = [];
           for (var j = 0; j < size2_arr[1]; j++) {

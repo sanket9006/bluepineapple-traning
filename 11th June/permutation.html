@@ -6,19 +6,41 @@
     <title>Document</title>
   </head>
   <body>
+    <p id="result">Possible permutations are</p>
+    <p id="demo"></p>
     <script>
       var input = prompt("Enter numbers");
-      var permutation = [];
-
       input = input.split("");
-      console.log(input);
-      for (let i = 0; i < input.length; i++) {
-        for (let j = 0; j < input.length; j++) {
-          if (i != j) {
-            permutation.push(input[j]);
+
+      const permutator = (inputArr) => {
+        let result = [];
+
+        const permute = (arr, m = []) => {
+          if (arr.length === 0) {
+            result.push(m);
+          } else {
+            for (let i = 0; i < arr.length; i++) {
+              let curr = arr.slice();
+              let next = curr.splice(i, 1);
+              permute(curr.slice(), m.concat(next));
+            }
           }
-        }
+        };
+
+        permute(inputArr);
+
+        return result;
+      };
+
+      let result = permutator(input);
+
+      function printresult(element, index) {
+        document.getElementById("demo").innerHTML +=
+          "<li>" + "\n[" + element + "]</li>" + "<br>";
+        console.log(element + "\n");
       }
+
+      result.forEach(printresult);
     </script>
   </body>
 </html>

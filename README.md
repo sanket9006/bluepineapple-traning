@@ -14,5 +14,4 @@ Website :- https://sanket9006.github.io/bluepineapple-traning/
 |           | <a href="https://sanket9006.github.io/bluepineapple-traning/7th%20June/matrixmultiplication.html" target="_blank">4. Matrix Multiplication</a>                          |
 | 11th June | <a href="https://sanket9006.github.io/bluepineapple-traning/11th%20June/permutation.html" target="_blank">1. Permutation of given string</a>                            |
 |           | <a href="https://sanket9006.github.io/bluepineapple-traning/11th%20June/reversepolish.html" target="_blank">2. Reverse Polish</a>                                       |
-|           | <a href="https://sanket9006.github.io/bluepineapple-traning/7th%20June/library.html" target="_blank">3. Library Management</a>                                          |
 |           | <a href="https://sanket9006.github.io/bluepineapple-traning/7th%20June/normalexpression.html" target="_blank">3. Normal Expression</a>                                  |

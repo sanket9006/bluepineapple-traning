@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      var final_text = "";
+      var numberoftimes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+      var n = parseInt(
+        prompt("Enter Number to find number of occurances of each digit")
+      );
+      var count = 0;
+      var d = 5;
+
+      while (n > 0) {
+        let value = n % 10;
+        numberoftimes[value] = numberoftimes[value] + 1;
+        n = parseInt(n / 10);
+      }
+
+      numberoftimes.map((item, index) => {
+        currenttext = document.getElementById("demo").innerText;
+        document.getElementById("demo").innerText =
+          currenttext + index + " occured " + item + " times " + "\n";
+      });
+    </script>
+  </body>
+</html>

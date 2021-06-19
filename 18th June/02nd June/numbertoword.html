@@ -1,0 +1,174 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="demo"></h1>
+    <script>
+      var number = parseInt(prompt("Enter number betwenn 0 to 99 Crore"));
+
+      const onetonineteen = [
+        "",
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five",
+        "Six",
+        "Seven",
+        "Eight",
+        "Nine",
+        "Ten",
+        "Eleven",
+        "Twelve",
+        "Thirteen",
+        "Fourteen",
+        "Fifteen",
+        "Sixteen",
+        "Seventeen",
+        "Eighteen",
+        "Ninteen",
+      ];
+
+      const tens = [
+        " ",
+        "Ten",
+        "Twenty",
+        "Thirty",
+        "Fourty",
+        "Fifty",
+        "Sixty",
+        "Seventy",
+        "Eighty",
+        "Ninety",
+      ];
+
+      function two(num) {
+        num = parseInt(num);
+        console.log("called");
+
+        if (num < 20) {
+          return `${onetonineteen[num]}`;
+        } else {
+          let tensplace = num / 10;
+          let unitplace = num % 10;
+          return `${tens[parseInt(tensplace)]}  ${onetonineteen[unitplace]}`;
+        }
+      }
+
+      function three(num) {
+        if ((num > 99) & (num < 1000)) {
+          return `${two(parseInt(num / 100))} hundred  ${two(num % 100)}`;
+        } else {
+          return two(parseInt(num));
+        }
+      }
+
+      function four(num) {
+        if ((num > 999) & (num < 10000)) {
+          num = num.toString();
+          let forthree = parseInt(num.slice(1, 4));
+          let fortwo = parseInt(num.slice(0, 1));
+          // console.log("passed", "three", forthree, "two", fortwo);
+          return `${two(fortwo)} thousand ${three(forthree)}`;
+        } else {
+          return three(num);
+        }
+      }
+
+      function five(num) {
+        if ((num > 9999) & (num < 100000)) {
+          return `${two(parseInt(num / 1000))} thousand  ${three(num % 1000)}`;
+        } else {
+          return four(num);
+        }
+      }
+
+      function six(num) {
+        if ((num > 99999) & (num < 1000000)) {
+          return `${two(parseInt(num / 100000))} lakh  ${five(num % 100000)}`;
+        } else {
+          return `${five(parseInt(num))}`;
+        }
+      }
+
+      function sevan(num) {
+        if ((num > 999999) & (num < 10000000)) {
+          return `${two(parseInt(num / 100000))} lakh  ${five(num % 100000)}`;
+        } else {
+          return `${six(parseInt(num))}`;
+        }
+      }
+
+      function eight(num) {
+        num = num.toString();
+        return `${two(parseInt(num.slice(0, 1)))} Crore  ${sevan(
+          num.slice(1, 8)
+        )}`;
+      }
+
+      function nine(num) {
+        num = num.toString();
+        return `${two(parseInt(num.slice(0, 2)))} Crore  ${sevan(
+          num.slice(2, 9)
+        )}`;
+      }
+
+      function ten(num) {
+        num = num.toString();
+        return `${two(parseInt(num.slice(0, 2)))} Crore  ${sevan(
+          num.slice(2, 9)
+        )}`;
+      }
+
+      if (number < 1000000000) {
+        switch (number.toString().length) {
+          case 1:
+            document.getElementById("demo").innerText = two(number);
+            break;
+
+          case 2:
+            document.getElementById("demo").innerText = two(number);
+            break;
+
+          case 3:
+            document.getElementById("demo").innerText = three(number);
+            break;
+
+          case 4:
+            document.getElementById("demo").innerText = four(number);
+            break;
+
+          case 5:
+            document.getElementById("demo").innerText = five(number);
+            break;
+
+          case 6:
+            document.getElementById("demo").innerText = six(number);
+            break;
+
+          case 7:
+            document.getElementById("demo").innerText = sevan(number);
+            break;
+
+          case 8:
+            document.getElementById("demo").innerText = eight(number);
+            break;
+
+          case 9:
+            document.getElementById("demo").innerText = nine(number);
+            break;
+
+          case 10:
+            document.getElementById("demo").innerText = ten(number);
+            break;
+        }
+      } else {
+        document.getElementById("demo").innerText = "Enter valid Number";
+      }
+    </script>
+  </body>
+</html>

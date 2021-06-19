@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="demo">
+      <h1 id="demo"></h1>
+    </div>
+    <script>
+      var input = prompt("Enter palindrome string");
+      var first = [];
+      first = input.split("");
+      second = input.split("").reverse();
+
+      console.log(first == second);
+
+      if (first.join("") == second.join("")) {
+        document.getElementById("demo").innerText = input + " is palindrome";
+      } else {
+        document.getElementById("demo").innerText =
+          input + " is not  palindrome";
+      }
+    </script>
+  </body>
+</html>

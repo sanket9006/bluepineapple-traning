@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result">Your output is</p>
+    <p id="demo"></p>
+    <script>
+      var str = prompt(
+        "first enter string on which you want to test the expression"
+      );
+      var expression = prompt("enter your expression");
+
+      var input_ = expression;
+      input = input_.split("");
+
+      document.getElementById("demo").innerHTML = input;
+
+      if (expression.includes("?")) {
+        let newstr = expression.replaceAll("?", ".");
+        let pk = new RegExp(newstr, "ig");
+        let result = str.match(pk);
+        document.getElementById("demo").innerHTML = str.match(pk);
+      } else if (expression.includes("*")) {
+        expression = expression.split("*");
+        expressionnew = expression[0] + "[a-zA-Z0-9.,$;]+";
+        let pk = new RegExp(expressionnew, "ig");
+        let result = str.match(pk);
+        document.getElementById("demo").innerHTML = str.match(pk);
+      } else {
+        alert("Enter a pattern");
+      }
+    </script>
+  </body>
+</html>

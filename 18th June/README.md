@@ -5,7 +5,6 @@
 ### alphabet_or_not.html
 
 ![image info](https://github.com/sanket9006/bluepineapple-traning/blob/main/others/2.PNG)
-<img  src="https://github.com/sanket9006/bluepineapple-traning/blob/main/others/2.PNG)">
 
 ### Perfact_number.html
 

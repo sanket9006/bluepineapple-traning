@@ -58,3 +58,37 @@ Notes :-
 
 - Code should be small (Fit on screen - Non scrollable)
 - Use reduce() instead of for loop for additive calculations
+- Make sure that function is pure
+  - Does not access anything else other than provided arguments
+  - Does not modify anything outside the loop
+
+ <hr />
+
+### Use `map()` insteed of `for/foreach`
+
+```
+const nums = [1,2,3,4,5,6];
+const doubles = [];
+
+for(let i = 0; i < nums.length; i++){
+  doubles.push(nums[i] * 2);
+}
+```
+
+```
+const nums = [1, 2, 3, 4, 5, 6];
+const doubles = nums.map((item) => item * 2);
+```
+
+ <hr />
+
+### Use `reduce()` to reduce aray into single value + executes given function for each elemet
+
+```
+// Syntax
+
+array.reduce(function(arg1 ,arg2), initial value)
+
+numbers = [1,2,3,4,5,6]
+const sum = numbers.reduce((sum, current) => sum + current ,0)
+```

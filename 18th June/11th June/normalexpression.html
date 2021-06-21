@@ -9,30 +9,24 @@
     <p id="result">Your output is</p>
     <p id="demo"></p>
     <script>
-      var str = prompt(
-        "first enter string on which you want to test the expression"
-      );
-      var expression = prompt("enter your expression");
+      const normalexpression = () => {
+        const str = prompt(
+          "first enter string on which you want to test the expression"
+        );
+        const expression = prompt("enter your expression");
 
-      var input_ = expression;
-      input = input_.split("");
+        if (expression.includes("?")) {
+          return str.match(new RegExp(expression.replaceAll("?", "."), "ig"));
+        } else if (expression.includes("*")) {
+          return str.match(
+            new RegExp(expression.split("*")[0] + "[a-zA-Z0-9.,$;]+", "ig")
+          );
+        } else {
+          return "Enter a pattern";
+        }
+      };
 
-      document.getElementById("demo").innerHTML = input;
-
-      if (expression.includes("?")) {
-        let newstr = expression.replaceAll("?", ".");
-        let pk = new RegExp(newstr, "ig");
-        let result = str.match(pk);
-        document.getElementById("demo").innerHTML = str.match(pk);
-      } else if (expression.includes("*")) {
-        expression = expression.split("*");
-        expressionnew = expression[0] + "[a-zA-Z0-9.,$;]+";
-        let pk = new RegExp(expressionnew, "ig");
-        let result = str.match(pk);
-        document.getElementById("demo").innerHTML = str.match(pk);
-      } else {
-        alert("Enter a pattern");
-      }
+      document.getElementById("demo").innerHTML = normalexpression();
     </script>
   </body>
 </html>

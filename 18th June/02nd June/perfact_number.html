@@ -9,30 +9,32 @@
     <p id="demo"></p>
 
     <script>
-      const n = parseInt(
-        prompt("Enter Number to find number of occurances of each digit")
-      );
-      var nn = n;
+      const perfactnumber = () => {
+        const n = parseInt(
+          prompt("Enter Number to find number of occurances of each digit")
+        );
 
-      for (i = 1; i <= n; i++) {
-        let sum = 0;
-        let halfofi = i / 2;
-        let j = 1;
+        for (i = 1; i <= n; i++) {
+          let sum = 0;
+          let halfofi = i / 2;
+          let j = 1;
 
-        while (j <= halfofi) {
-          if (i % j == 0) {
-            sum = sum + j;
+          while (j <= halfofi) {
+            if (i % j == 0) {
+              sum = sum + j;
+            }
+            j++;
           }
-          j++;
-        }
 
-        if (i === sum) {
-          console.log(i + " is perfact number");
-          let currentext = document.getElementById("demo").innerText;
-          document.getElementById("demo").innerText =
-            currentext + "\n" + i + " is perfact number ";
+          {
+            i === sum
+              ? (document.getElementById("demo").innerText +=
+                  "\n" + i + " is perfact number ")
+              : "";
+          }
         }
-      }
+      };
+      perfactnumber();
     </script>
   </body>
 </html>

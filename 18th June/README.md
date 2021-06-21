@@ -1,16 +1,17 @@
 ### normalexpression.html
 
-![image info](../others/1.png)
+![image info](https://github.com/sanket9006/bluepineapple-traning/blob/main/others/1.PNG)
 
 ### alphabet_or_not.html
 
-![image info](../others/2.png)
+![image info](https://github.com/sanket9006/bluepineapple-traning/blob/main/others/2.PNG)
+<img  src="https://github.com/sanket9006/bluepineapple-traning/blob/main/others/2.PNG)">
 
 ### Perfact_number.html
 
 </hr>
 
-![image info](../others/3.png)
+![image info](https://github.com/sanket9006/bluepineapple-traning/blob/main/others/3.png)
 
 ## Functional programming concepts
 

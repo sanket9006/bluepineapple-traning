@@ -10,7 +10,7 @@
 
 </hr>
 
-![image info](https://github.com/sanket9006/bluepineapple-traning/blob/main/others/3.png)
+![image info](https://github.com/sanket9006/bluepineapple-traning/blob/main/others/3.PNG)
 
 ## Functional programming concepts
 

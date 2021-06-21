@@ -1,3 +1,17 @@
+### normalexpression.html
+
+![image info](../others/1.png)
+
+### alphabet_or_not.html
+
+![image info](../others/2.png)
+
+### Perfact_number.html
+
+</hr>
+
+![image info](../others/3.png)
+
 ## Functional programming concepts
 
 - Immutable Data

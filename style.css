@@ -1,7 +1,7 @@
-
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
 }
 p {
   color: red;
@@ -10,35 +10,87 @@ p {
 .links {
   margin: 5%;
   padding: 5%;
-    text-align: center;
-background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-
+  text-align: center;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-  a {
-    color: white;
-  }
+a {
+  color: white;
+}
 .repo {
-    text-align: center;
-   
+  text-align: center;
 }
 
 .repo a {
-    text-decoration: none;
-    }
-    
+  text-decoration: none;
+}
+
 .heading {
   text-align: center;
   color: white;
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 .main {
-  background-color: #2F6ED3;
+  background-color: #2f6ed3;
   min-height: 100vh;
   padding: 20px;
+}
+
+.library {
+  background-color: #f8f8f8;
+}
+
+select {
+  padding: 12px 25px;
+  border-radius: 50px 10px 10px 10px;
+
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  color: white;
+
+  background-color: #ea0025;
+}
+
+button {
+  padding: 8px;
+}
+
+.btn10 {
+  padding: 15px 25px;
+  border-radius: 10px 10px 37px 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  color: white;
+
+  background-color: #434241;
+}
+
+.btn11 {
+  padding: 15px 25px;
+  border-radius: 10px 10px 10px 37px;
+
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  color: white;
+
+  background-color: #32b138;
+}
+
+.tableinfo {
+  color: #0e452b;
+}
+
+.input1 {
+  padding: 15px 25px;
+  border-radius: 10px 37px 10px 10px;
+  outline: none;
 }

@@ -13,9 +13,11 @@
         <button onclick="search()">Search</button>
         <button onclick="remove()">Delete</button>
         <button onclick="show()">Show Records</button>
+        <button onclick="sortthecolumn()">Sort the list by column name</button>
       </div>
       <p id="demo"></p>
       <p id="result"></p>
+      <p id="1"></p>
     </div>
 
     <script>
@@ -136,6 +138,39 @@
       function findindexof(value) {
         let index = value == valueofindex;
         return index;
+      }
+
+      function sortthecolumn() {
+        const columnnametosort = prompt(
+          "Enter column name accourding to which you want to sort the list \nid \ncost \nbookname \nauthor"
+        );
+
+        var new_id = id.sort();
+        var new_cost = cost.sort();
+        var new_bookname = id.sort();
+        var new_author = author.sort();
+
+        document.getElementById(
+          "result"
+        ).innerHTML = `${new_id} <br> ${new_cost}.sort() <br> ${new_bookname} <br> ${new_author} `;
+
+        switch (columnnametosort) {
+          case "id":
+            console.log(new_author);
+            break;
+
+          case "cost":
+            console.log(new_cost);
+            break;
+
+          case "bookname":
+            console.log(new_bookname);
+            break;
+
+          case "author":
+            console.log(new_author);
+            break;
+        }
       }
     </script>
   </body>

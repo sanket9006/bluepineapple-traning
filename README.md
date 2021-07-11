@@ -15,4 +15,4 @@ Website :- https://sanket9006.github.io/bluepineapple-traning/
 | 11th June | <a href="https://sanket9006.github.io/bluepineapple-traning/11th%20June/permutation.html" target="_blank">1. Permutation of given string</a>                            |
 |           | <a href="https://sanket9006.github.io/bluepineapple-traning/11th%20June/reversepolish.html" target="_blank">2. Reverse Polish</a>                                       |
 |           | <a href="https://sanket9006.github.io/bluepineapple-traning/7th%20June/normalexpression.html" target="_blank">3. Normal Expression</a>                                  |
-| 07th July | <a href="https://sanket9006.github.io/bluepineapple-traning/07th%20June/1.html" target="_blank">1. Permutation of given string</a>                                      |
+| 07th July | <a href="https://sanket9006.github.io/bluepineapple-traning/07th%20June/1.html" target="_blank">1. Sortable + Searchable Table</a>                                      |

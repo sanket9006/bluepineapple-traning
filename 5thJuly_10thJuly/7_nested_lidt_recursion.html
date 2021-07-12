@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function flatten(ary) {
+        var new_arr = [];
+        for (var i = 0; i < ary.length; i++) {
+          if (Array.isArray(ary[i])) {
+            new_arr = new_arr.concat(flatten(ary[i]));
+          } else {
+            new_arr.push(ary[i]);
+          }
+        }
+        return new_arr;
+      }
+
+      alert(
+        "For \n[[[[[88]], [15]], [[[583], [73]]], [[34], [83]]]] \n" +
+          "we are getting \n" +
+          flatten([[[[[88]], [15]], [[[583], [73]]], [[34], [83]]]])
+      );
+    </script>
+  </body>
+</html>

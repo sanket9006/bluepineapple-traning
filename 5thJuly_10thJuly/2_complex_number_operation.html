@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var _input1_1 = parseInt(
+        prompt("Enter first part of Imaginary Complex Number [1]")
+      );
+
+      var _input1_2 = parseInt(
+        prompt("Enter second part of Imaginary Complex Number [1]")
+      );
+
+      var _input2_1 = parseInt(
+        prompt("Enter first part of Imaginary Complex Number [2]")
+      );
+      var _input2_2 = parseInt(
+        prompt("Enter second part of Imaginary Complex Number [2]")
+      );
+
+      var operation = prompt(
+        "What operations do you want to perform \n 1. +\n 2. - \n 3. * \n 4. /"
+      );
+
+      switch (operation) {
+        case "+":
+          let result1 = _input1_1 + _input2_1;
+          var result2 = _input1_2 + _input2_2;
+          document.write(result1 + "+" + result2 + "i");
+          break;
+
+        case "-":
+          let result11 = _input1_1 - _input2_1;
+          let result22 = _input1_2 - _input2_2;
+          document.write(document.write(result11 + "+" + result22 + "i"));
+          break;
+        case "*":
+          let result111 = _input1_1 * _input2_1;
+          let result222 = _input1_2 * _input2_2;
+          document.write(document.write(result111 + "+" + result222 + "i"));
+          break;
+
+        case "/":
+          let result1111 = _input1_1 / _input2_1;
+          let result2222 = _input1_2 / _input2_2;
+          document.write(document.write(result1111 + "+" + result2222 + "i"));
+          break;
+      }
+    </script>
+  </body>
+</html>

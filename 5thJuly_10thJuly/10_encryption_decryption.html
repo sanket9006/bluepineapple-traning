@@ -6,8 +6,51 @@
     <title>Document</title>
   </head>
   <body>
+    <input id="key" placeholder="key" > </body>
+    <input id="plaintext" placeholder="plaintext"> </input>  <br>  <br> 
+    <button onclick="shiftcipher()">encrypt</button> <br> <br> 
+    <button onclick="shiftcipher()">decrypt</button> <br>
+    <br>
+    Encrypted / Decrypted Text :- <input id="ciphertext" placeholder="ciphertext"> </input>
     <script>
-      function encryptcipher() {
+      function shiftcipher() {
+        var key = document.getElementById("key").value;
+        var plaintext = document.getElementById("plaintext").value;
+        var ciphertext = document.getElementById("ciphertext").value;
+        var result = "";
+        for (var i = 0; i < plaintext.length; i++) {
+          var char = plaintext.charCodeAt(i);
+          var newchar = char;
+          if (char >= 65 && char <= 90) {
+            newchar = ((char + key - 65) % 26) + 65;
+          } else if (char >= 97 && char <= 122) {
+            newchar = ((char + key - 97) % 26) + 97;
+          } else {
+            newchar = char;
+          }
+          result += String.fromCharCode(newchar);
+        }
+        document.getElementById("ciphertext").value = result;
+      }
+      function decryptcipher() {
+        var key = document.getElementById("key").value;
+        var plaintext = document.getElementById("plaintext").value;
+        var ciphertext = document.getElementById("ciphertext").value;
+        var result = "";
+        for (var i = 0; i < ciphertext.length; i++) {
+          var char = ciphertext.charCodeAt(i);
+          var newchar = char;
+          if (char >= 65 && char <= 90) {
+            newchar = ((char - key + 65) % 26) + 65;
+          } else if (char >= 97 && char <= 122) {
+            newchar = ((char - key + 97) % 26) + 97;
+          } else {
+            newchar = char;
+          }
+          result += String.fromCharCode(newchar);
+        }
+        document.getElementById("plaintext").value = result;
+      }
     </script>
   </body>
 </html>

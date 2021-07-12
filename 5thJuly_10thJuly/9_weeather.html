@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        function getweatherbycityname() {
+            let citynametofetchdata = document.getElementById("cityname_").value;
+            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${citynametofetchdata}&APPID=ac8b5e8f7d5f0a21e794195ce192fd9e&units=metric`
+            , {method: "GET"}).then(function(response) {
+                return response.json();
+            }).then(function(json) {
+                document.getElementById("cityname").innerHTML = json.name;
+                document.getElementById("cityweather").innerHTML = json.weather[0].main;
+                document.getElementById("citytemp").innerHTML = json.main.temp;
+                document.getElementById("cityhumidity").innerHTML = json.main.humidity;
+                document.getElementById("citypressure").innerHTML = json.main.pressure;
+                document.getElementById("citywind").innerHTML = json.wind.speed;
+
+            });
+        }
+    </script>
+    <h1>Get Weather</h1>
+    <input type="text" id="cityname_" placeholder="Enter city name" >
+    <div style="font-size:20px;"><br>Cityname</div>
+    <div id="cityname" style="font-size:20px;"></div>
+
+    <div style="font-size:20px;"><br>City Weather</div>
+    <div id="cityweather" style="font-size:20px;"></div>
+
+    <div style="font-size:20px;"><br>Temperature</div>
+    <div id="citytemp" style="font-size:20px;"></div>
+
+    <div style="font-size:20px;"><br>Humidity</div>
+    <div id="cityhumidity" style="font-size:20px;"></div>
+
+    <div style="font-size:20px;"><br>Pressure</div>
+    <div id="citypressure" style="font-size:20px;"></div>
+
+    <div style="font-size:20px;"><br>Windspeed</div>
+    <div id="citywind" style="font-size:20px;"></div>
+
+    <div style="font-size:20px;"><br></div>
+
+    <button onclick="getweatherbycityname()">Get Weather</button>
+</body>
+</html>
+    </script>
+</body>
+</html>

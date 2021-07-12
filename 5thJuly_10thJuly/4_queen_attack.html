@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function canqueenattack(br, bc, wr, wc) {
+        if (br == wr) {
+          return true;
+        }
+
+        if (bc == wc) {
+          return true;
+        }
+
+        if (Math.abs(br - wr) == Math.abs(bc - wc)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      var br = parseInt(prompt("Enter the row of the black queen"));
+      var bc = parseInt(prompt("Enter the column of the black queen"));
+
+      var wr = parseInt(prompt("Enter the row of the white queen"));
+      var wc = parseInt(prompt("Enter the column of the white queen"));
+
+      if (canqueenattack(br, bc, wr, wc)) {
+        alert("Yes, the black queen can attack the white queen");
+      } else {
+        alert("No, the black queen cannot attack the white queen");
+      }
+    </script>
+  </body>
+</html>

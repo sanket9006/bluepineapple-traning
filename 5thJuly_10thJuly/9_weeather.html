@@ -7,8 +7,6 @@
 </head>
 <body>
     <script>
-
-
         function getweatherbycityname() {
             let citynametofetchdata = document.getElementById("cityname_").value;
             fetch(`http://api.openweathermap.org/data/2.5/weather?q=${citynametofetchdata}&APPID=ac8b5e8f7d5f0a21e794195ce192fd9e&units=metric`
@@ -21,7 +19,6 @@
                 document.getElementById("cityhumidity").innerHTML = json.main.humidity;
                 document.getElementById("citypressure").innerHTML = json.main.pressure;
                 document.getElementById("citywind").innerHTML = json.wind.speed;
-
             });
         }
     </script>

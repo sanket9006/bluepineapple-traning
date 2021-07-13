@@ -4,8 +4,8 @@ Website :- https://sanket9006.github.io/bluepineapple-traning/
 
 | Date      | Programs                                                                                                                                                                |
 | --------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 14th July | <a href="https://github.com/sanket9006/bluepineapple-traning/blob/main/14thJuly/bluepineapple-react-traning" target="_blank">1. Sortable + Searchable Table</a>         |
-| 12th July | <a href=https://github.com/sanket9006/bluepineapple-traning/blob/main/12thJuly" target="\_blank">1. Sortable + Searchable Table</a>                                     |
+| 14th July | <a href="https://github.com/sanket9006/bluepineapple-traning/blob/main/14thJuly/bluepineapple-react-traning" target="_blank">1. React App</a>                           |
+| 12th July | <a href="https://github.com/sanket9006/bluepineapple-traning/blob/main/12thJuly" target="\_blank">1. Node JS Backend for Complex Number</a>                             |
 | 07th July | <a href="https://sanket9006.github.io/bluepineapple-traning/07th%20June/1.html" target="_blank">1. Sortable + Searchable Table</a>                                      |
 | 11th June | <a href="https://sanket9006.github.io/bluepineapple-traning/11th%20June/permutation.html" target="_blank">1. Permutation of given string</a>                            |
 |           | <a href="https://sanket9006.github.io/bluepineapple-traning/11th%20June/reversepolish.html" target="_blank">2. Reverse Polish</a>                                       |

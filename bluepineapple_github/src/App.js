@@ -1,9 +1,9 @@
-import GetUsers from './Comnponents/GetUsers/GetUsers'
+import ServicenowFetchAPI from './Comnponents/ServicenowFetchAPI/ServicenowFetchAPI'
 
 function App() {
   return (
     <div className="App">
-      <GetUsers />
+      <ServicenowFetchAPI />
     </div>
   );
 }

@@ -1,9 +1,9 @@
-import ServicenowFetchAPI from './Comnponents/ServicenowFetchAPI/ServicenowFetchAPI'
+import Home from './Pages/Home'
 
 function App() {
   return (
     <div className="App">
-      <ServicenowFetchAPI />
+     <Home />
     </div>
   );
 }
